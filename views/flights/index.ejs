@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mongoose Flights</title>
+  <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+
+<body>
+  <a href="/flights/new">Add a Flight</a>
+  <h1>Flight List</h1>
+  <table>
+    <thead>
+      <tr>
+        <th>Airline</th>
+        <th>Flight Number</th>
+        <th>Departs</th>
+        <th>Now Boarding</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% flights.forEach(function(flight) { %>
+        <tr>
+          <td><%= flight.airline %></td>
+          <td><%= flight.flightNo %></td>
+          <td><%= flight.departs %></td>
+          <td><%= flight.nowBoarding ? 'Yes' : 'No' %></td>    
+        </tr>
+      <% }); %>
+    </tbody>
+  </table>
+</body>
+
+</html>

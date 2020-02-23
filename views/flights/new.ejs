@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <title>Flights</title>
+</head>
+<body>
+    <h2>Enter a New Flight</h2>
+    <form action="/movies" method="POST">
+        <label>Airline:
+            <select name="airline">
+                <option value="Southwest">Southwest</option>
+                <option value="United">United</option>
+                <option value="American">American</option>
+              </select>
+        </label><br>
+        <label>Flight Number:
+          <input type="text" name="flightNo">
+        </label><br>
+        <label for="departs">Departs:
+          <input type="datetime-local" id="departs" name="departs" value="yyyy-MM-ddThh:mm">
+        </label><br>
+        <label>Now Boarding:
+          <input type="checkbox" name="nowBoarding" checked>
+        </label><br>
+        <input type="submit" value="Add Flight">
+    </form>
+</body>
+</html>
