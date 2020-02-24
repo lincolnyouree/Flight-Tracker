@@ -9,14 +9,18 @@
 </head>
 
 <body>
+  <a href="/flights">All Flights</a>
   <a href="/flights/new">Add a Flight</a>
   <h1>Flight List</h1>
   <table>
     <thead>
       <tr>
         <th>Airline</th>
+        <th>Origin</th>
+        <th>Destination</th>
         <th>Flight Number</th>
         <th>Departs</th>
+        <th>Details</th>
         <th>Now Boarding</th>
       </tr>
     </thead>
@@ -24,8 +28,11 @@
       <% flights.forEach(function(flight) { %>
         <tr>
           <td><%= flight.airline %></td>
+          <td><%= flight.airport %></td>
+          <td><%=  %></td>
           <td><%= flight.flightNo %></td>
           <td><%= flight.departs %></td>
+          <td><a href="/flights/<%= flight._id %>">Details</a></td>
           <td><%= flight.nowBoarding ? 'Yes' : 'No' %></td>    
         </tr>
       <% }); %>

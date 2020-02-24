@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <a href="/flights">All Flights</a>
+  <a href="/flights/new">Add a Flight</a>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel='stylesheet' href='/stylesheets/style.css' />
@@ -15,6 +17,15 @@
                 <option value="United">United</option>
                 <option value="American">American</option>
               </select>
+            </label><br>
+        <label>Airport:
+          <select name="airport">
+              <option value="AUS">AUS</option>
+              <option value="DAL">DAL</option>
+              <option value="LAX">LAX</option>
+              <option value="SAN">SAN</option>
+              <option value="SEA">SEA</option>
+            </select>
         </label><br>
         <label>Flight Number:
           <input type="text" name="flightNo">
@@ -26,6 +37,6 @@
           <input type="checkbox" name="nowBoarding" checked>
         </label><br>
         <input type="submit" value="Add Flight">
-    </form>
+      </form>
 </body>
 </html>
