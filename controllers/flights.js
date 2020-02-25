@@ -21,6 +21,11 @@ function index(req, res, next) {
 }
 
 function create(req, res) {
+  if (!req.body.departs) {
+    let redate = new Date();
+    redate.setFullYear(redate.getFullYear()+1);
+    req.body.departs
+}
     req.body.nowBoarding = !!req.body.nowBoarding;
     for (let key in req.body) {
       if (req.body[key] === '') delete req.body[key];
