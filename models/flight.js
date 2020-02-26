@@ -36,7 +36,7 @@ const flightSchema = new Schema({
       type: Boolean,
       default: false
   }, 
-  destinations: [destinationSchema]
+  destinations: [destinationSchema],
 }, {
   timestamps: true
 });

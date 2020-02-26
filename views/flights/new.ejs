@@ -37,7 +37,11 @@
         <label>Now Boarding:
           <input type="checkbox" name="nowBoarding" checked>
         </label><br>
+        <label>Please book a seat between A1 and F9:</label>
+        <input name="seat" required pattern="[A-F][1-9]\d?">
+        <br><br>
         <input type="submit" value="Add Flight">
+        
       </form>
 </body>
 </html>
