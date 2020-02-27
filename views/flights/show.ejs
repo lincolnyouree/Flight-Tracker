@@ -60,25 +60,31 @@
         <h5>No Destinations Yet</h5>
       <% } %>
 
-      <form action="/flights/<%= flight._id%>/tickets/new" method="POST">
+      <form action="/flights/<%= flight._id %>/tickets/new" method="GET">
         
         <button type="submit">New Ticket</button>
       </form>
-
-      <% if (flight.tickets) { %>
+      
+      <% if (tickets.length) { %>
         <table>
           <thead>Tickets Purchased</thead>
-          <tbody>
-           
+          <tbody> 
+            <% tickets.forEach(function(t) {%>
+      
               <tr>
-                <td> Seat <%= ticket.seat %></td>
+                <td> Seat <%= t.seat %></td>
               </tr>
-          </tbody>
-        </table>
-      <% } else { %>
-        <h5>No Tickets Purchased Yet</h5>
-      <% } %>
-
+              
+              <tr>
+                <td> Price <%= t.price %></td>
+              </tr>
+            </tbody>
+          </table>
+          <%})  %>
+        <% } else { %>
+          <h5>No Tickets Purchased Yet</h5>
+          <% } %>
+          
 </section>
 
 </body>
