@@ -7,7 +7,9 @@ module.exports = {
     new: newFlight,
     show,
     create,
-    delete: deleteOne
+    delete: deleteOne,
+    showUpdatePage,
+    update
 };
 
 function show(req, res) {
@@ -29,7 +31,7 @@ function create(req, res) {
   if (!req.body.departs) {
     let redate = new Date();
     redate.setFullYear(redate.getFullYear()+1);
-    req.body.departs
+    req.body.departs = redate;
 }
     req.body.nowBoarding = !!req.body.nowBoarding;
     for (let key in req.body) {
@@ -49,6 +51,24 @@ function create(req, res) {
 
 function deleteOne(req, res) {
   Flight.findByIdAndDelete(req.params.id, function(err, flight) {
+    res.redirect('/flights');
+  })
+};
+
+function showUpdatePage(req, res){
+  Flight.findById(req.params.id, function(err, flight) {
+    res.render('flights/edit', {flight})
+  })
+};
+
+function update(req, res){
+  console.log('test')
+  if (!req.body.departs) {
+    let redate = new Date();
+    redate.setFullYear(redate.getFullYear()+1);
+    req.body.departs = redate;
+}
+  Flight.findByIdAndUpdate(req.params.id, req.body, function(err, flight) {
     res.redirect('/flights');
   })
 };

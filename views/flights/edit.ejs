@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <a href="/">Home</a>
+  <a href="/flights">All Flights</a>
+  <a href="/flights/new"></a>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <title>Flights</title>
+</head>
+<body>
+    <h2>Update Flight Information</h2>
+    <form action="/flights/<%= flight._id %>?_method=PUT" method="POST">
+        <label>Airline:
+            <select name="airline" value=<% flight.airline%>>
+                <option value="<%= flight.airline%>"><%= flight.airline%></option>
+                <option value="Southwest">Southwest</option>
+                <option value="United">United</option>
+                <option value="American">American</option>
+              </select>
+            </label><br>
+        <form action="/flights/<%= flight._id %>?_method=PUT" method="POST">
+        <label>Airport:
+          <select name="airport" value=<% flight.airport%>>
+            <option value="<%= flight.airport%>"><%= flight.airport%></option>
+              <option value="AUS">AUS</option>
+              <option value="DAL">DAL</option>
+              <option value="LAX">LAX</option>
+              <option value="SAN">SAN</option>
+              <option value="SEA">SEA</option>
+            </select>
+        </label><br>
+        <label>Flight Number:
+          <input type="text" name="flightNo" value="<%= flight.flightNo %>">
+        </label><br>
+        <label for="departs">Departs:
+          <input type="datetime-local" id="departs" name="departs" value=<% flight.departs%>>
+        </label><br>
+        
+        <br><br>
+        <input type="submit" value="Update Flight">
+      </form>
+</body>
+</html>

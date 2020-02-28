@@ -20,6 +20,7 @@
         <div>Departure Date/Time: </div>
         <div><%= flight.departs %></div>
       </section>
+        <br>
       <form action="/flights/<%= flight._id %>" method="POST">
       <label>Airport:
         <select name="airport">
@@ -36,6 +37,8 @@
         </label><br><br>
         <input type="submit" value="Add Destination">
     </form>
+    <form action="/flights/<%= flight._id %>/edit" method="GET">
+      <button type="submit">Update</button>
     <% if (flight.destinations.length) { %>
         <table>
           <thead>
