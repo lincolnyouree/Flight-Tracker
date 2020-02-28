@@ -5,7 +5,6 @@ useCreateIndex: true,
 useUnifiedTopology: true
 });
 
-
 // shortcut variable 
 const db = mongoose.connection;
 

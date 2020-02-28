@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <a href="/">Home</a>
     <a href="/flights">All Flights</a>
@@ -10,7 +9,6 @@
   <title>Mongoose Flights</title>
   <link rel="stylesheet" href="/stylesheets/style.css">
 </head>
-
 <body>
     <section>
         <div>Airline: </div>
@@ -38,7 +36,6 @@
         </label><br><br>
         <input type="submit" value="Update">
     </form>
-
     <% if (flight.destinations.length) { %>
         <table>
           <thead>
@@ -59,22 +56,17 @@
       <% } else { %>
         <h5>No Destinations Yet</h5>
       <% } %>
-
       <form action="/flights/<%= flight._id %>/tickets/new" method="GET">
-        
         <button type="submit">New Ticket</button>
       </form>
-      
       <% if (tickets.length) { %>
         <table>
           <thead>Tickets Purchased</thead>
           <tbody> 
             <% tickets.forEach(function(t) {%>
-      
               <tr>
                 <td> Seat <%= t.seat %></td>
               </tr>
-              
               <tr>
                 <td> Price <%= t.price %></td>
               </tr>
@@ -84,8 +76,6 @@
         <% } else { %>
           <h5>No Tickets Purchased Yet</h5>
           <% } %>
-          
 </section>
-
 </body>
 </html>
