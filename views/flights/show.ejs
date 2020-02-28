@@ -34,7 +34,7 @@
         <label>Arrival Date/Time:
             <input type="datetime-local" name="arrival">
         </label><br><br>
-        <input type="submit" value="Update">
+        <input type="submit" value="Add Destination">
     </form>
     <% if (flight.destinations.length) { %>
         <table>
@@ -69,6 +69,13 @@
               </tr>
               <tr>
                 <td> Price <%= t.price %></td>
+              </tr>
+              <tr>
+                <td> 
+                  <form action="/flights/<%= flight._id %>/tickets/<%= t._id %>?_method=DELETE" method="POST">
+                  <button>X</button>
+                  </form>
+                </td>
               </tr>
             </tbody>
           </table>
