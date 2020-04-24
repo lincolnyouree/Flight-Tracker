@@ -1,6 +1,6 @@
 # Flight Tracker
 
-* A full-stack Express CRUD app for tracking flights.
+* A full-stack CRUD app for tracking flights.
 
 * Click [here]() to view the app.
 
@@ -10,8 +10,8 @@
 * HTML | EJS
 * CSS
 * JavaScript
-* Mongoose
-* GitHub Pages
+* MongoDB | Mongoose
+* Heroku
 
 ## Screenshots:
 
