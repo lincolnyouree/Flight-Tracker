@@ -6,14 +6,18 @@
   <title>Mongoose Flights</title>
   <link rel="stylesheet" href="/stylesheets/style.css">
 </head>
-<body>
-  <a href="/">Home</a>
-  <a href="/flights">All Flights</a>
+<nav>
+  <a href="/">Home</a><br>
+  <a href="/flights">All Flights</a><br>
   <a href="/flights/new">Add a Flight</a>
+  </nav>
+<body>
+  
   <h1>Flight List</h1>
+  <div class="flightList">
   <table>
     <thead>
-      <tr>
+      <tr class="titles">
         <th>Airline</th>
         <th>Origin</th>
         <th>Flight Number</th>
@@ -33,9 +37,10 @@
           <td><%= flight.nowBoarding ? 'Yes' : 'No' %></td>    
           <td>
             <form action="/flights/<%= flight._id %>?_method=DELETE" method="POST">
-            <button type="submit">X</button>
+            <button type="submit" class="btn">X</button>
             </form>
           </td>
+        </div>
         </tr>
       <% }); %>
     </tbody>

@@ -1,24 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <a href="/">Home</a>
-    <a href="/flights">All Flights</a>
+  <nav>
+    <a href="/">Home</a><br>
+    <a href="/flights">All Flights</a><br>
     <a href="/flights/new">Add a Flight</a>
+    </nav>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mongoose Flights</title>
   <link rel="stylesheet" href="/stylesheets/style.css">
 </head>
 <body>
+  <div class="flightdetails">
     <section>
-        <div>Airline: </div>
-        <div><%= flight.airline %></div>
-        <div>Origin: </div>
-        <div><%= flight.airport %></div>
-        <div>Flight Number: </div>
-        <div><%= flight.flightNo %></div>
-        <div>Departure Date/Time: </div>
-        <div><%= flight.departs %></div>
+        <div>Airline: </div><br>
+        <div><%= flight.airline %></div><br>
+        <div>Origin: </div><br>
+        <div><%= flight.airport %></div><br>
+        <div>Flight Number: </div><br>
+        <div><%= flight.flightNo %></div><br>
+        <div>Departure Date/Time: </div><br>
+        <div><%= flight.departs %></div><br>
       </section>
         <br>
       <form action="/flights/<%= flight._id %>" method="POST">
@@ -31,14 +34,14 @@
             <option value="SEA">SEA</option>
           </select>
       </label>
-<section>
+<section><br>
         <label>Arrival Date/Time:
             <input type="datetime-local" name="arrival">
         </label><br><br>
-        <input type="submit" value="Add Destination">
-    </form>
+        <input type="submit" value="Add Destination" class="btn"><br>
+    </form><br>
     <form action="/flights/<%= flight._id %>/edit" method="GET">
-      <button type="submit">Update</button>
+      <button type="submit" class="btn">Update</button>
     <% if (flight.destinations.length) { %>
         <table>
           <thead>
@@ -60,7 +63,7 @@
         <h5>No Destinations Yet</h5>
       <% } %>
       <form action="/flights/<%= flight._id %>/tickets/new" method="GET">
-        <button type="submit">New Ticket</button>
+        <button type="submit" class="btn">New Ticket</button>
       </form>
       <% if (tickets.length) { %>
         <table>
@@ -85,6 +88,7 @@
           <%})  %>
         <% } else { %>
           <h5>No Tickets Purchased Yet</h5>
+        </div>
           <% } %>
 </section>
 </body>

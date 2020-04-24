@@ -1,16 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <a href="/">Home</a>
-  <a href="/flights">All Flights</a>
-  <a href="/flights/new">Add a Flight</a>
+  
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel='stylesheet' href='/stylesheets/style.css' />
     <title>Flights</title>
 </head>
+<nav>
+  <a href="/">Home</a><br>
+  <a href="/flights">All Flights</a><br>
+  <a href="/flights/new">Add a Flight</a>
+  </nav>
 <body>
-    <h2>Enter a New Flight</h2>
+    <h1>Enter a New Flight</h1>
+    <div class="welcome">
     <form action="/flights" method="POST">
         <label>Airline:
             <select name="airline">
@@ -18,7 +22,7 @@
                 <option value="United">United</option>
                 <option value="American">American</option>
               </select>
-            </label><br>
+            </label><br><br>
         <label>Airport:
           <select name="airport">
               <option value="AUS">AUS</option>
@@ -27,20 +31,21 @@
               <option value="SAN">SAN</option>
               <option value="SEA">SEA</option>
             </select>
-        </label><br>
+        </label><br><br>
         <label>Flight Number:
           <input type="text" name="flightNo">
-        </label><br>
+        </label><br><br>
         <label for="departs">Departs:
           <input type="datetime-local" id="departs" name="departs" value="yyyy-MM-ddThh:mm">
-        </label><br>
+        </label><br><br>
         <label>Now Boarding:
           <input type="checkbox" name="nowBoarding" checked>
-        </label><br>
+        </label><br><br>
         <label>Please book a seat between A1 and F9:</label>
         <input name="seat" required pattern="[A-F][1-9]\d?">
-        <br><br>
-        <input type="submit" value="Add Flight">
+        <br><br><br>
+        <input type="submit" value="Add Flight" class="btn">
       </form>
+      </div>
 </body>
 </html>

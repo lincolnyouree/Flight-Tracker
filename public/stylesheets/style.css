@@ -1,18 +1,72 @@
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-  margin: 200px;
-  justify-content: center;
-  background-color: yellow;
+  margin: auto;
+  background-color: whitesmoke;
 }
 
 a {
   color: red;
+  padding: 1vmin;
 }
 
 h1 {
   background-color: red;
+  color: whitesmoke;
+  height: 7vmin;
+  padding: 3vmin;
+  display: flex;
+  flex-direction: column;
   text-align: center;
-  color: white;
-  padding: 25px;
+  justify-content: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.welcome {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 3vmin;
+}
+
+.flightList {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 5vmin;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 3vmin;
+}
+
+p {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 4vmin;
+}
+
+.btn {
+  background-color: red;
+  color: whitesmoke;
+  font-size: 2vmin;
+  padding: 1vmin;
+}
+
+.airline {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+}
+
+.flightdetails {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 5vmin;
 }

@@ -1,16 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <a href="/">Home</a>
-  <a href="/flights">All Flights</a>
+  <a href="/">Home</a><br>
+  <a href="/flights">All Flights</a><br>
   <a href="/flights/new">Add a Flight</a>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel='stylesheet' href='/stylesheets/style.css' />
     <title>Flights</title>
 </head>
-<body>
- <br>
+<body><br>
  <form action="/flights/<%= flight._id%>/tickets"method="POST">
         <label>Please book a seat between A1 and F9:</label>
         <input name="seat" required pattern="[A-F][1-9]\d?">

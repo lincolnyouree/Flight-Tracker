@@ -4,11 +4,15 @@
     <title><%= title %></title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
+  <nav>
+    <a href="/">Home</a><br>
+    <a href="/flights">All Flights</a><br>
+    <a href="/flights/new">Add a Flight</a>
+  </nav>
   <body>
     <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
-    <a href="/">Home</a>
-    <a href="/flights">All Flights</a>
-    <a href="/flights/new">Add a Flight</a>
+    <div class="welcome">
+      <p>Welcome to <%= title %>!</p>
+    </div>
   </body>
 </html>
