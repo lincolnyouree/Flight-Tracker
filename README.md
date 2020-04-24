@@ -2,7 +2,7 @@
 
 * A full-stack CRUD app for tracking flights.
 
-* Click [here]() to view the app.
+* Click [here](https://expressflighttracker.herokuapp.com/) to view the app.
 
 ## Technologies Used:
 
